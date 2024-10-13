@@ -1,18 +1,43 @@
-import React from 'react';
-import './FormStyles.css'; // Importing a CSS file for form styles
+import React, { useState } from 'react';
+import './FormStyles.css'; 
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password); 
+
+    setEmail('');
+    setPassword('');
+    console.log('User data saved:', { email, password });
+  };
+
   return (
     <div>
       <h2>Login</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label>Email:</label>
-          <input type="email" required className="form-input" />
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="form-input"
+          />
         </div>
         <div>
           <label>Password:</label>
-          <input type="password" required className="form-input" />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            className="form-input"
+          />
         </div>
         <button type="submit">Login</button>
       </form>
@@ -21,4 +46,3 @@ const Login = () => {
 };
 
 export default Login;
-
