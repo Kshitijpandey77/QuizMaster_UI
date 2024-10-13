@@ -5,13 +5,22 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e){
     e.preventDefault();
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', password); 
+    // localStorage.setItem('email', email);
+    // localStorage.setItem('password', password); 
 
-    setEmail('');
-    setPassword('');
+    // setEmail('');
+    // setPassword('');
+    const register = {email, password}
+
+        console.log(register);
+
+        registerAPICall(register).then((response) => {
+            console.log(response.data);
+        }).catch(error => {
+            console.error(error);
+        })
     console.log('User data saved:', { email, password });
   };
 

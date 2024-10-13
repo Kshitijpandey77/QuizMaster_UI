@@ -6,16 +6,16 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  function handleSubmit (e) {
     e.preventDefault();
   
-    localStorage.setItem('username', username);
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', password);
+    // localStorage.setItem('username', username);
+    // localStorage.setItem('email', email);
+    // localStorage.setItem('password', password);
 
-    setUsername('');
-    setEmail('');
-    setPassword('')
+    // setUsername('');
+    // setEmail('');
+    // setPassword('')
     console.log('User data saved:', { username, email, password });
   };
 
