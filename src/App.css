@@ -1,0 +1,21 @@
+body {
+  margin: 0; /* Remove default margin */
+  height: 100vh; /* Set body height to full viewport height */
+}
+
+.App {
+  text-align: center;
+  background-color: rgb(131, 185, 235); /* Set background color to blue */
+  min-height: 100vh; /* Ensure .App covers full height */
+  color: white; /* Change text color to white */
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+.form-input {
+  margin: 0.5rem 0; /* Add space above and below the input fields */
+  padding: 0.5rem; /* Add some padding for better usability */
+  width: 100%; /* Make input fields full width */
+  max-width: 300px; /* Optional: set a maximum width */
+}

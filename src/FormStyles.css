@@ -1,0 +1,7 @@
+.form-input {
+    margin: 0.5rem 0; /* Add space above and below the input fields */
+    padding: 0.5rem; /* Add some padding for better usability */
+    width: 100%; /* Make input fields full width */
+    max-width: 300px; /* Optional: set a maximum width */
+  }
+  
