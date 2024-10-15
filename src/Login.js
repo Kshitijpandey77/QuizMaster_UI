@@ -16,7 +16,7 @@ const Login = () => {
 
         console.log(register);
 
-        registerAPICall(register).then((response) => {
+        loginAPICall(register).then((response) => {
             console.log(response.data);
         }).catch(error => {
             console.error(error);

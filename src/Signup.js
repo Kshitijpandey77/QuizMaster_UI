@@ -16,6 +16,15 @@ const Signup = () => {
     // setUsername('');
     // setEmail('');
     // setPassword('')
+    const register = {email, password}
+
+        console.log(register);
+
+        SignupAPICall(register).then((response) => {
+            console.log(response.data);
+        }).catch(error => {
+            console.error(error);
+        })
     console.log('User data saved:', { username, email, password });
   };
 
